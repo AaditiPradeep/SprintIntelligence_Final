@@ -11,7 +11,7 @@ Predictive and prescriptive analytics framework for Agile sprint planning. The d
 | `models/` | Saved multimodal neural Resolution Risk model and its local MiniLM text encoder. |
 | `data/processed/` | Clean v6.1/v6.2 derived datasets, source-aware split, selected classical models, calibration artefacts, and small demo CSVs. |
 | `scripts/evaluation/` | Calibration, candidate-scoring, threshold and optimiser-evaluation scripts. |
-| `notebooks/` | Colab-ready source exports for baseline and neural variants, feature audit/selection, final selection and aggregation. Some include Colab commands such as `!pip install`, so run them in Colab rather than directly in PowerShell. |
+| `notebooks/` | Colab-ready source exports for baseline and neural variants, feature audit/selection, final selection and aggregation. |
 | `train_resolution_neural_colab.py` | Self-contained Colab/local training script for the saved Resolution Risk neural model. |
 | `tests/` | Automated checks for optimisation, mitigations and candidate scoring. |
 
@@ -46,16 +46,6 @@ Open <http://127.0.0.1:8000> in a browser. Stop the server with `Ctrl+C`.
 Use the upload control in the dashboard.
 
 * `data/processed/demo_candidates_v6_2.csv` — scored by the saved models and intended for per-issue explanations and dependencies.
-
-The second file is for user-interface demonstration. It contains illustrative risk scores; it must not be represented as a new model evaluation set.
-
-## Run automated checks
-
-With the virtual environment activated:
-
-```powershell
-python -m unittest tests.test_optimizer tests.test_mitigation tests.test_candidate_scoring
-```
 
 ## Reproduce the saved Resolution Risk neural model
 
