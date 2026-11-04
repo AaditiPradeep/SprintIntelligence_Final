@@ -1,0 +1,14 @@
+{
+  "study_version": "v6_2_effort_expected_utility",
+  "primary_failure_label": "issue_resolution_risk_label",
+  "primary_failure_definition": "Issue remains unresolved at the 180-day deadline from creation, or is resolved after that deadline.",
+  "primary_risk_probability": "calibrated issue_resolution_risk probability",
+  "secondary_risk_signals": [
+    "requirement_volatility_label",
+    "issue_reopen_label"
+  ],
+  "effort_column": "story_points_at_cutoff",
+  "population_rule": "Use only rows with a real cutoff-safe story-point estimate and an eligible primary outcome label.",
+  "reason_for_primary_outcome": "This provides 3,045 effort-qualified eligible rows. A three-outcome any-adverse label would leave only 1,172 rows and would require an unvalidated probability-combination assumption.",
+  "evaluation_note": "This is a retrospective replay of selection quality, not evidence that the optimizer caused future outcomes."
+}

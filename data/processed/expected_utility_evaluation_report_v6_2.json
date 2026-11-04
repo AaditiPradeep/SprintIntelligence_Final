@@ -1,0 +1,81 @@
+{
+  "evaluation_population": {
+    "effort_qualified_test_records": 351,
+    "pseudo_sprints": 7,
+    "window_days": 60
+  },
+  "expected_utility": "V_i(1-r_i) - gamma*V_i*r_i, with gamma=1.0 and calibrated Resolution Risk probability r_i.",
+  "priority_proxy": {
+    "lowest": 0.1,
+    "low": 0.25,
+    "medium": 0.5,
+    "high": 0.75,
+    "highest": 1.0,
+    "critical": 1.0
+  },
+  "aggregate_results": {
+    "expected_utility_ilp": {
+      "realized_value": 11.57143,
+      "failed_commitment_share": 0.06357,
+      "wasted_effort": 3.28571,
+      "value_per_effort": 0.14755
+    },
+    "no_risk_ilp_ablation": {
+      "realized_value": 12.71429,
+      "failed_commitment_share": 0.08724,
+      "wasted_effort": 6.0,
+      "value_per_effort": 0.16504
+    },
+    "oracle_ilp": {
+      "realized_value": 13.14286,
+      "failed_commitment_share": 0.0,
+      "wasted_effort": 0.0,
+      "value_per_effort": 0.1792
+    },
+    "priority_only_greedy": {
+      "realized_value": 12.78571,
+      "failed_commitment_share": 0.0852,
+      "wasted_effort": 5.28571,
+      "value_per_effort": 0.16742
+    },
+    "random_selection_mean": {
+      "realized_value": 9.59714,
+      "failed_commitment_share": 0.1267,
+      "wasted_effort": 8.97714,
+      "value_per_effort": 0.11763
+    },
+    "rules_plus_greedy": {
+      "realized_value": 12.28571,
+      "failed_commitment_share": 0.10587,
+      "wasted_effort": 5.57143,
+      "value_per_effort": 0.15041
+    },
+    "value_per_effort_greedy": {
+      "realized_value": 12.78571,
+      "failed_commitment_share": 0.0852,
+      "wasted_effort": 5.28571,
+      "value_per_effort": 0.16742
+    }
+  },
+  "expected_utility_vs_priority_only": {
+    "mean_difference": -1.21429,
+    "ci_95": [
+      -2.28571,
+      -0.5
+    ]
+  },
+  "expected_utility_vs_no_risk_ablation": {
+    "mean_difference": -1.14286,
+    "ci_95": [
+      -2.07143,
+      -0.5
+    ]
+  },
+  "wilcoxon_expected_utility_vs_priority_only": 0.03125,
+  "limitations": [
+    "Retrospective replay measures selection quality, not intervention effects.",
+    "Priority is a business-value proxy.",
+    "The test population has no cutoff-safe dependency graph, so dependency cost is not evaluated here.",
+    "Only the Random Forest Resolution model is calibrated for this study; the dashboard neural model needs its own calibration artifact."
+  ]
+}

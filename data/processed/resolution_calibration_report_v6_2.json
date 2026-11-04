@@ -1,0 +1,23 @@
+{
+  "model": "issue_resolution_risk_selected_model_v6_1 Random Forest + validation-only Platt scaling",
+  "calibration_split": "source-aware validation partition",
+  "evaluation_split": "source-aware test partition",
+  "test_raw": {
+    "records": 2737,
+    "positives": 979,
+    "brier_score": 0.245492,
+    "expected_calibration_error_10_bins": 0.131466,
+    "roc_auc": 0.614942
+  },
+  "test_calibrated": {
+    "records": 2737,
+    "positives": 979,
+    "brier_score": 0.231695,
+    "expected_calibration_error_10_bins": 0.093666,
+    "roc_auc": 0.614942
+  },
+  "effort_qualified_test_records": 353,
+  "calibrator_file": "resolution_probability_calibrator_v6_2.joblib",
+  "prediction_file": "resolution_test_predictions_calibrated_v6_2.csv",
+  "limitation": "This calibrates the exported Random Forest evaluation model. The neural Resolution scorer requires its own validation-based calibration artifact before it can be used in expected-utility optimisation."
+}

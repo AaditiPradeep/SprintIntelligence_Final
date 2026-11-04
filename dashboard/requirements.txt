@@ -1,0 +1,10 @@
+# The saved v6.1 joblib models were trained with scikit-learn 1.6.1.
+numpy<2
+pandas>=2
+joblib>=1.4
+scikit-learn==1.6.1
+shap==0.48.0
+# Required when candidate issues are scored with the saved Resolution Risk neural model.
+tensorflow==2.21.0
+sentence-transformers==5.7.0
+pulp==2.9.0

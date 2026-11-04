@@ -1,0 +1,30 @@
+{
+  "dataset": "training_dataset_v6_1.csv",
+  "row_count": 40013,
+  "source_counts": {
+    "SecondLife": 1867,
+    "JiraEcosystem": 5000,
+    "IntelDAOS": 5000,
+    "Hyperledger": 28146
+  },
+  "observation_window_days": 30,
+  "label_horizon_days": 150,
+  "resolution_deadline_days_from_creation": 180,
+  "volatility_change_threshold_within_horizon": 2,
+  "target_eligibility_and_positive_counts": {
+    "requirement_volatility_label": {
+      "eligible_rows": 27654,
+      "positive_rows": 3147
+    },
+    "issue_resolution_risk_label": {
+      "eligible_rows": 18236,
+      "positive_rows": 9264
+    },
+    "issue_reopen_label": {
+      "eligible_rows": 9865,
+      "positive_rows": 323
+    }
+  },
+  "safe_model_features_file": "model_feature_columns_v6.json",
+  "methodology_note": "v6 uses cutoff-safe features, blank timing values plus availability flags, and fixed future horizons. Future audit and label fields must never be model inputs."
+}

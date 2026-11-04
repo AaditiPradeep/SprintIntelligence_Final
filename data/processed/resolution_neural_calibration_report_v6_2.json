@@ -1,0 +1,19 @@
+{
+  "model": "multimodal Resolution neural model + validation-only Platt scaling",
+  "test_raw": {
+    "records": 2737,
+    "positives": 979,
+    "brier_score": 0.249297,
+    "expected_calibration_error_10_bins": 0.170413,
+    "roc_auc": 0.625742
+  },
+  "test_calibrated": {
+    "records": 2737,
+    "positives": 979,
+    "brier_score": 0.227195,
+    "expected_calibration_error_10_bins": 0.087531,
+    "roc_auc": 0.625742
+  },
+  "effort_qualified_test_records": 353,
+  "methodology_note": "Calibration was fit on the source-aware validation split only; test labels were not used during fitting."
+}

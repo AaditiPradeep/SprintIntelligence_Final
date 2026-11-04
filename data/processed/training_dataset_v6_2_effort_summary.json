@@ -1,0 +1,31 @@
+{
+  "dataset": "training_dataset_v6_2_effort.csv",
+  "source_dataset": "training_dataset_v6_1.csv",
+  "row_count": 40013,
+  "observation_window_days": 30,
+  "story_point_mapping": {
+    "SecondLife": "customfield_10163",
+    "JiraEcosystem": "customfield_10133",
+    "IntelDAOS": "customfield_10026",
+    "Hyperledger": "customfield_10002"
+  },
+  "coverage_by_source": {
+    "Hyperledger": {
+      "records": 28146,
+      "available_story_points": 3299
+    },
+    "IntelDAOS": {
+      "records": 5000,
+      "available_story_points": 3808
+    },
+    "JiraEcosystem": {
+      "records": 5000,
+      "available_story_points": 57
+    },
+    "SecondLife": {
+      "records": 1867,
+      "available_story_points": 5
+    }
+  },
+  "methodology_note": "Story points are reconstructed at the 30-day cutoff by reversing later Jira Story Points changes. Rows without a real estimate remain missing; no proxy effort is created."
+}

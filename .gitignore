@@ -1,0 +1,27 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Operating system / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw source copies and generated local outputs
+data/raw/
+data/exports/
+Dataset/
+output/
+*.log
+
+# Do not commit a newly-created model over the verified saved model without review
+models/*/checkpoints/
